@@ -17,7 +17,7 @@ export default function manageTweets(state = {
             return {...state, tweets}
 
         case 'ADD_COMMENT':
-            const comment = { text: action.comment.text, tweetId: action.review.tweetId, id: cuidFn()};
+            const comment = { text: action.comment.text, tweetId: action.comment.tweetId, id: cuidFn()};
             return {...state,
                 comments: [...state.comments, comment]
             }

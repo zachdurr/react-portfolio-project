@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TweetsContainer from '../../containers/TweetsContainer';
+import CommentsContainer from '../../containers/CommentsContainer';
+
 
 class Tweet extends Component {
     handleOnClick() {
@@ -14,7 +15,7 @@ class Tweet extends Component {
                 <li>
                     {tweet.text}
                     <button onClick={() => this.handleOnClick()}> X </button>
-                    <TweetsContainer tweet={tweet} />
+                    <CommentsContainer tweet={tweet} />
                 </li>
             </div>
         )

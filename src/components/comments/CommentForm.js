@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Comments from './Comments';
 
 class CommentForm extends Component {
     state = {
@@ -37,3 +36,4 @@ class CommentForm extends Component {
         )
     }
 }
+export default CommentForm;
