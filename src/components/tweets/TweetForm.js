@@ -1,3 +1,5 @@
+import { addTweetApi } from "../actions/tweetAction";
+import { connect } from "react-redux";
 import React, { Component } from "react";
 
 class TweetForm extends Component {
@@ -16,7 +18,8 @@ class TweetForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addTweet(this.state.text)
+        // this.props.addTweet(this.state.text)
+        this.props.addTweetApi(this.state.text)
         this.setState({
             text: ''
         })
@@ -40,4 +43,4 @@ class TweetForm extends Component {
 }
 
 
-export default TweetForm;
+export default connect(null, { addTweetApi })(TweetForm);

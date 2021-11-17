@@ -4,7 +4,8 @@ export const cuidFn = cuid;
 export default function manageTweets(state = {
     tweets: [],
     comments: [],
-    loading: false
+    loading: false,
+    done: false,
 }, action) {
     switch(action.type) {
         case 'ADD_TWEET':
@@ -13,11 +14,22 @@ export default function manageTweets(state = {
                 ...state,
                 tweets: [...state.tweets, tweet]
             }
+        case 'ADD_TWEETS':
+            const api_tweets = action.tweets
+            return {
+                ...state,
+                tweets: [...state.tweets, ...api_tweets],
+                loading: false,
+                done: true
+            }
         case 'DELETE_TWEET':
             const tweets = state.tweets.filter(tweet => tweet.id !== action.id);
             return {...state, tweets}
 
-        case 'LOADING_TWEET':
+        case 'LOADING_TWEETS':
+            console.log(
+                'loading_tweet', state.tweets
+            )
             return {
                 ...state,
                 tweets: [...state.tweets],
