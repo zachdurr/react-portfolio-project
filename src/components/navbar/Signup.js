@@ -1,5 +1,5 @@
 import React from "react"
-const Login = () => {
+const SignUp = () => {
     return (
       <div>
         <form>
@@ -12,11 +12,11 @@ const Login = () => {
             <label htmlFor="password">Password</label>
           </div>
           <div>
-            <input type="submit" value="Login"/>
+            <input type="submit" value="SignUp"/>
           </div>
         </form>
       </div>
     )
   }
 
-  export default Login
+  export default SignUp

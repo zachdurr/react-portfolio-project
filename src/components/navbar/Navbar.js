@@ -10,41 +10,52 @@ import { NavLink } from "react-router-dom";
         color: "white",
     };
 
+    const nav = {
+      display: 'flex'
+    }
+
 
 const Navbar = () => (
-    <div>
+    <div style={nav}>
       <NavLink
         to="/"
         /* set exact so it knows to only set activeStyle when route is deeply equal to link */
-        exact
+        exact="true"
         /* add styling to Navlink */
         style={link}
         /* add prop for activeStyle */
-        activeStyle={{
-          background: "darkblue",
-        }}
+        // activeStyle={{
+        //   background: "darkblue",
+        // }}
       >
         Home
       </NavLink>
       <NavLink
         to="/about"
-        exact
+        exact="true"
         style={link}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        // activeStyle={{
+        //   background: "darkblue",
+        // }}
       >
         About
       </NavLink>
       <NavLink
         to="/login"
-        exact
+        exact="true"
         style={link}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        // activeStyle={{
+        //   background: "darkblue",
+        // }}
       >
         Login
+      </NavLink>
+      <NavLink
+        to="/signup"
+        exact="true"
+        style={link}
+      >
+        Signup
       </NavLink>
     </div>
   );

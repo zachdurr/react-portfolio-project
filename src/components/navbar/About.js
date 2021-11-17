@@ -1,8 +1,8 @@
 import React from "react"
 const About = () => {
     return (
-      <div>
-        <h1>This is about my component!</h1>
+      <div className="about">
+        <h1>Welcome to Fwitter! We hope you enjoy your Fweeting!!</h1>
       </div>
     )
   }

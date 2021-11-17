@@ -1,8 +1,18 @@
-import React from "react";
+import {Component} from "react";
+import TweetsContainer from "../../containers/TweetsContainer";
+import { fetchTweets } from "../actions/tweetAction";
 
-class Home extends React.Component {
+class Home extends Component {
+
+    componentDidMount() {
+        fetchTweets();
+    }
+
+
   render() {
-    return <h1>Home!</h1>;
+    return (
+        <TweetsContainer />
+        );
   }
 }
 
