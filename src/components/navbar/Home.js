@@ -1,11 +1,15 @@
 import {Component} from "react";
 import TweetsContainer from "../../containers/TweetsContainer";
 import { fetchTweets } from "../actions/tweetAction";
+import { connect } from 'react-redux';
 
 class Home extends Component {
 
     componentDidMount() {
-        fetchTweets();
+        console.log(this.props.done)
+        if (!this.props.done) {
+            this.props.fetchTweets();
+        }
     }
 
 
@@ -16,4 +20,9 @@ class Home extends Component {
   }
 }
 
-export default Home;
+
+const mapStateToProps = (state) => {
+    return {done: state.done}
+}
+
+export default connect(mapStateToProps, {fetchTweets})(Home);

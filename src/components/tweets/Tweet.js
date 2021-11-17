@@ -9,7 +9,6 @@ class Tweet extends Component {
 
     render(){
         const { tweet } = this.props
-
         return (
             <div>
                 <li>
