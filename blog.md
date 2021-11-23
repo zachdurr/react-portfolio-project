@@ -1,0 +1,5 @@
+Creating my final project was way harder than I thought it was going to be. Creating the components and connecting them to each other wasn't too hard - however connecting the rails API to the react app was not something that I had practiced much of and took a lot of time to make fully functional. 
+
+I started the project wanting to make a basic version of Twitter where someone can Tweet something and comment on existing tweets. Ideally I'd like to make the signin/login functionality but for the purpose of graduating on time, I figured let's submit what we have and we can always go back and tweak it when we have time during the job search phase.
+
+Submitting this project I felt actualy relief because there were points during the 14.5 months of this where I couldn't see the end in sight. I now feel like I have a good grasp on Full Stack Software Engineering and I couldn't be more happy/proud of myself. It's a great feeling starting something from scratch and finishing it and this project felt like the perfect culmination of that for the bootcamp as a whole.
