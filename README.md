@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+This project is intended to be a (lesser) version of Twitter where a user can post tweets and add comments to each tweet found in the Home page. It was built with create-react-app and utilizes Redux to manage state throughout the project.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
