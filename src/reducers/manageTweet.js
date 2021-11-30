@@ -6,6 +6,9 @@ export default function manageTweets(state = {
     comments: [],
     loading: false,
     done: false,
+    username: '',
+    password: '',
+    logged_in: false
 }, action) {
     switch(action.type) {
         case 'ADD_TWEET':
@@ -44,7 +47,14 @@ export default function manageTweets(state = {
         case 'DELETE_COMMENT':
             const comments = state.comments.filter(comment => comment.id !== action.id);
             return {...state, comments }   
-            
+
+        case 'ADD_USER':
+            return {
+                ...state,
+                username: action.username,
+                password: action.password,
+                logged_in: true
+            }
         default: 
             return state;
     }

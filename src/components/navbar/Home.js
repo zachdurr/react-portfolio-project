@@ -15,14 +15,20 @@ class Home extends Component {
 
   render() {
     return (
+        <div>
+        {this.props.logged_in ? <div> {this.props.username} </div> : ''}
         <TweetsContainer />
-        );
+        </div>);
   }
 }
 
 
 const mapStateToProps = (state) => {
-    return {done: state.done}
+    return {
+        done: state.done,
+        logged_in: state.logged_in,
+        username: state.username
+    }
 }
 
 export default connect(mapStateToProps, {fetchTweets})(Home);

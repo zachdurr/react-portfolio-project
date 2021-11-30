@@ -6,7 +6,6 @@ export const fetchTweets = () => {
         }).then((resJSON) => {
             dispatch({type: 'ADD_TWEETS', tweets: resJSON})
         })
-            
     }
 }
 
